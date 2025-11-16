@@ -1,0 +1,41 @@
+timestamp: '2025-11-16T12:13:35.924005'
+version: '1.0'
+configuration:
+  chunking:
+    chunk_size: 500
+    overlap: 150
+    strategy: Reduced chunk size for improved precision and increased overlap for
+      continuity
+  retrieval:
+    method: hybrid
+    top_k: 10
+    vector_weight: 0.6
+    bm25_weight: 0.4
+    retrieval_pool: 20
+  generation:
+    model: gpt-4o-mini
+    max_tokens: 500
+    temperature: 0.3
+reasoning: The chunk size has been reduced to 500 words with a 150-word overlap to
+  enhance retrieval precision and diversity. This addresses the previous issues of
+  low retrieval scores and lack of diversity. Increasing the top-k parameter to 10
+  allows for a broader selection of results, which is beneficial given the improvements
+  in chunking. Adjusting the hybrid weights to favor vector retrieval slightly (0.6)
+  while still incorporating BM25 (0.4) reflects the balanced performance observed
+  in the analysis, aiming to leverage the strengths of both methods.
+expected_benefits:
+- Improved retrieval precision
+- Increased diversity of results
+- Better continuity in information retrieval
+- Higher average retrieval scores
+confidence: high
+source_reports:
+  profiling_summary:
+    avg_retrieval_score: 0.16346651420689146
+    score_std: 0.10522161803478405
+    avg_unique_sources: 1.5
+    total_issues_detected: 22
+    unique_issues: 3
+  chunk_proposal_summary:
+    proposed_chunk_size: 500
+    proposed_overlap: 150
