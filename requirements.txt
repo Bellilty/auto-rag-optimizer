@@ -29,6 +29,9 @@ pydantic==2.9.2
 tqdm==4.66.1  # Progress bars
 requests==2.32.3
 
+# Demo interface
+gradio==5.49.1
+
 # Optional: LangChain for simplified LLM interactions (if needed)
 # langchain==0.1.0
 # langchain-openai==0.0.2
