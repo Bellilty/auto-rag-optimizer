@@ -1,0 +1,56 @@
+{
+  "description": "Test queries for RAG evaluation and profiling",
+  "queries": [
+    {
+      "query": "What are the main principles of data protection?",
+      "category": "general",
+      "difficulty": "medium"
+    },
+    {
+      "query": "What rights do data subjects have?",
+      "category": "rights",
+      "difficulty": "medium"
+    },
+    {
+      "query": "What is the role of a data controller?",
+      "category": "definitions",
+      "difficulty": "easy"
+    },
+    {
+      "query": "What are the penalties for non-compliance?",
+      "category": "enforcement",
+      "difficulty": "medium"
+    },
+    {
+      "query": "How should consent be obtained?",
+      "category": "consent",
+      "difficulty": "medium"
+    },
+    {
+      "query": "What is the difference between a controller and a processor?",
+      "category": "definitions",
+      "difficulty": "hard"
+    },
+    {
+      "query": "What are the lawful bases for processing personal data?",
+      "category": "legal_basis",
+      "difficulty": "medium"
+    },
+    {
+      "query": "When is a data protection impact assessment required?",
+      "category": "compliance",
+      "difficulty": "hard"
+    },
+    {
+      "query": "What are the requirements for data breach notification?",
+      "category": "breach",
+      "difficulty": "medium"
+    },
+    {
+      "query": "What is the principle of data minimization?",
+      "category": "principles",
+      "difficulty": "easy"
+    }
+  ]
+}
+

@@ -1,0 +1,32 @@
+# Base RAG Configuration
+# ======================
+# This is the baseline configuration that will be optimized
+
+version: "1.0"
+description: "Baseline RAG configuration for optimization"
+
+# Document chunking parameters
+chunking:
+  chunk_size: 1000  # Size in words
+  overlap: 200      # Overlap in words
+  strategy: "word_based"  # Chunking strategy
+
+# Retrieval configuration
+retrieval:
+  method: "hybrid"     # Options: "vector", "bm25", "hybrid"
+  top_k: 5             # Number of chunks to retrieve
+  vector_weight: 0.7   # Weight for vector search (semantic)
+  bm25_weight: 0.3     # Weight for BM25 search (lexical)
+  retrieval_pool: 20   # Number of candidates to retrieve from each method before reranking
+
+# Generation configuration
+generation:
+  model: "gpt-4o-mini"     # OpenAI model for answer generation
+  max_tokens: 500          # Maximum tokens in generated answer
+  temperature: 0.3         # Generation temperature (lower = more deterministic)
+
+# Evaluation configuration
+evaluation:
+  judge_model: "gpt-4o-mini"  # Model used to judge answer quality
+  score_range: [0, 10]         # Score range for evaluation
+
