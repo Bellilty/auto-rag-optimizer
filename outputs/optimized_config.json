@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-11-16T19:39:08.513885",
+  "timestamp": "2025-11-17T21:56:48.499454",
   "version": "1.0",
   "configuration": {
     "chunking": {
-      "chunk_size": 600,
-      "overlap": 180,
-      "strategy": "Reduce chunk size to increase diversity and unique sources while maintaining context through overlap."
+      "chunk_size": 500,
+      "overlap": 100,
+      "strategy": "Reduce chunk size to improve precision and diversity in retrieval results."
     },
     "retrieval": {
       "method": "hybrid",
-      "top_k": 10,
-      "vector_weight": 0.6,
-      "bm25_weight": 0.4,
-      "retrieval_pool": 20
+      "top_k": 3,
+      "vector_weight": 0.3,
+      "bm25_weight": 0.7,
+      "retrieval_pool": 10
     },
     "generation": {
       "model": "gpt-4o-mini",
@@ -20,25 +20,29 @@
       "temperature": 0.3
     }
   },
-  "reasoning": "The chunk size is reduced to 600 words with an overlap of 180 words to enhance retrieval diversity and ensure contextual integrity. Increasing the top-k to 10 allows for a broader selection of relevant documents. Adjusting the vector and BM25 weights to 0.6 and 0.4 respectively reflects a balanced approach, considering the performance metrics and the need for improved retrieval scores.",
+  "reasoning": "The proposed chunk size of 500 words with an overlap of 100 words aims to enhance the retrieval precision and diversity. Given the analysis shows a complete dominance of BM25 in retrieval performance, adjusting the weights to favor BM25 more while reducing the vector weight reflects the current performance trends. The top-k remains at 3 as it aligns with the current retrieval performance without significant improvement in scores.",
   "expected_benefits": [
-    "Increased diversity of retrieved documents",
-    "Higher average retrieval score",
-    "Improved contextual relevance",
-    "Better handling of various query types"
+    "Improved precision in retrieval results",
+    "Increased diversity of sources retrieved",
+    "Better alignment with BM25 performance metrics"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "source_reports": {
     "profiling_summary": {
-      "avg_retrieval_score": 0.16348760533235548,
-      "score_std": 0.10523790600155719,
-      "avg_unique_sources": 1.5,
-      "total_issues_detected": 22,
-      "unique_issues": 3
+      "avg_retrieval_score": 0.4962106012021787,
+      "score_std": 0.07771724326897936,
+      "avg_unique_sources": 1.3333333333333333,
+      "total_issues_detected": 7,
+      "unique_issues": 1
     },
     "chunk_proposal_summary": {
-      "proposed_chunk_size": 600,
-      "proposed_overlap": 180
+      "proposed_chunk_size": 500,
+      "proposed_overlap": 100
+    },
+    "evaluation_summary": {
+      "baseline_avg": 9.0,
+      "optimized_avg": 8.88888888888889,
+      "improvement_pct": -1.2345679012345634
     }
   }
 }

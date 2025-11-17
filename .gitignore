@@ -40,7 +40,7 @@ venv.bak/
 .env.local
 
 # Data and outputs
-data/raw_docs/*.pdf
+
 data/raw_docs/*.txt
 data/processed_docs/*
 data/index/*

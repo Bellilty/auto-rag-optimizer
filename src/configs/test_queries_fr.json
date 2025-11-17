@@ -1,0 +1,49 @@
+{
+    "description": "Questions de test en français pour documents juridiques français",
+    "queries": [{
+            "query": "Quels sont les principes fondamentaux de la République française ?",
+            "category": "constitution",
+            "difficulty": "medium"
+        },
+        {
+            "query": "Quelle est la durée légale du travail en France ?",
+            "category": "droit_du_travail",
+            "difficulty": "easy"
+        },
+        {
+            "query": "Quel est le rôle du Président de la République ?",
+            "category": "constitution",
+            "difficulty": "medium"
+        },
+        {
+            "query": "Quels sont les droits du salarié en cas de licenciement ?",
+            "category": "droit_du_travail",
+            "difficulty": "hard"
+        },
+        {
+            "query": "Comment sont élus les députés à l'Assemblée nationale ?",
+            "category": "constitution",
+            "difficulty": "medium"
+        },
+        {
+            "query": "Qu'est-ce que le contrat à durée indéterminée (CDI) ?",
+            "category": "droit_du_travail",
+            "difficulty": "easy"
+        },
+        {
+            "query": "Quels sont les pouvoirs du Conseil constitutionnel ?",
+            "category": "constitution",
+            "difficulty": "hard"
+        },
+        {
+            "query": "Quelle est la procédure pour modifier la Constitution ?",
+            "category": "constitution",
+            "difficulty": "hard"
+        },
+        {
+            "query": "Qu'est-ce que le principe de laïcité dans la République française ?",
+            "category": "constitution",
+            "difficulty": "medium"
+        }
+    ]
+}

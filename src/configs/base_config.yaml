@@ -6,15 +6,16 @@ version: "1.0"
 description: "Baseline RAG configuration for optimization"
 
 # Document chunking parameters
+# NOTE: Intentionally VERY suboptimal for demonstration purposes
 chunking:
-  chunk_size: 1000  # Size in words
-  overlap: 200      # Overlap in words
+  chunk_size: 4000  # Size in words (VERY large - intentionally bad)
+  overlap: 0        # No overlap (intentionally bad)
   strategy: "word_based"  # Chunking strategy
 
 # Retrieval configuration
 retrieval:
   method: "hybrid"     # Options: "vector", "bm25", "hybrid"
-  top_k: 5             # Number of chunks to retrieve
+  top_k: 3             # Number of chunks to retrieve (intentionally low)
   vector_weight: 0.7   # Weight for vector search (semantic)
   bm25_weight: 0.3     # Weight for BM25 search (lexical)
   retrieval_pool: 20   # Number of candidates to retrieve from each method before reranking
