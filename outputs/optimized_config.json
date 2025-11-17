@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-11-16T12:13:35.924005",
+  "timestamp": "2025-11-16T19:39:08.513885",
   "version": "1.0",
   "configuration": {
     "chunking": {
-      "chunk_size": 500,
-      "overlap": 150,
-      "strategy": "Reduced chunk size for improved precision and increased overlap for continuity"
+      "chunk_size": 600,
+      "overlap": 180,
+      "strategy": "Reduce chunk size to increase diversity and unique sources while maintaining context through overlap."
     },
     "retrieval": {
       "method": "hybrid",
@@ -20,25 +20,25 @@
       "temperature": 0.3
     }
   },
-  "reasoning": "The chunk size has been reduced to 500 words with a 150-word overlap to enhance retrieval precision and diversity. This addresses the previous issues of low retrieval scores and lack of diversity. Increasing the top-k parameter to 10 allows for a broader selection of results, which is beneficial given the improvements in chunking. Adjusting the hybrid weights to favor vector retrieval slightly (0.6) while still incorporating BM25 (0.4) reflects the balanced performance observed in the analysis, aiming to leverage the strengths of both methods.",
+  "reasoning": "The chunk size is reduced to 600 words with an overlap of 180 words to enhance retrieval diversity and ensure contextual integrity. Increasing the top-k to 10 allows for a broader selection of relevant documents. Adjusting the vector and BM25 weights to 0.6 and 0.4 respectively reflects a balanced approach, considering the performance metrics and the need for improved retrieval scores.",
   "expected_benefits": [
-    "Improved retrieval precision",
-    "Increased diversity of results",
-    "Better continuity in information retrieval",
-    "Higher average retrieval scores"
+    "Increased diversity of retrieved documents",
+    "Higher average retrieval score",
+    "Improved contextual relevance",
+    "Better handling of various query types"
   ],
   "confidence": "high",
   "source_reports": {
     "profiling_summary": {
-      "avg_retrieval_score": 0.16346651420689146,
-      "score_std": 0.10522161803478405,
+      "avg_retrieval_score": 0.16348760533235548,
+      "score_std": 0.10523790600155719,
       "avg_unique_sources": 1.5,
       "total_issues_detected": 22,
       "unique_issues": 3
     },
     "chunk_proposal_summary": {
-      "proposed_chunk_size": 500,
-      "proposed_overlap": 150
+      "proposed_chunk_size": 600,
+      "proposed_overlap": 180
     }
   }
 }
